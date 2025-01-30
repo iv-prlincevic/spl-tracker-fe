@@ -14,7 +14,7 @@ export default function OwnerTable() {
     useEffect(() => {
         const getWallets = async () => {
           try {
-            const response = await axios.get(`http://16.170.155.236:3000/balance/${owner}`); // No need to include the base URL
+            const response = await axios.get(`/api/balance/${owner}`); // No need to include the base URL
             setData(response.data);
           } catch (error) {
             console.error("Error fetching wallets:", error);
