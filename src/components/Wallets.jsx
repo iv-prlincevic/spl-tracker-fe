@@ -13,7 +13,7 @@ export default function Wallets() {
     useEffect(() => {
         const getWallets = async () => {
           try {
-            const response = await axios.get("/wallets"); // No need to include the base URL
+            const response = await axios.get("http://16.170.155.236:3000/wallets"); // No need to include the base URL
             setData(response.data);
           } catch (error) {
             console.error("Error fetching wallets:", error);
